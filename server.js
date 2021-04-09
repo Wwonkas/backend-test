@@ -30,7 +30,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json()); //app.use because its a middleware --> after the app variable has been created
 
-app.get('/', (req, res) => { res.send(database.users) })
+app.get('/', (req, res) => { res.send('it is working') })
 
 app.post('/signin', signin.handleSignin(db, bcrypt))
 
